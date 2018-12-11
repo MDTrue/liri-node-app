@@ -12,7 +12,7 @@ of several API's and node.js packages including:
 * bandsintown-api
 
 https://github.com/MDTrue/liri-node-app
-
+ ![game image](https://github.com/MDTrue/portfolioUpdatedMDT/blob/master/assets/images/psychicGame.PNG)
 
 
 
