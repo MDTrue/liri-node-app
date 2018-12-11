@@ -11,6 +11,8 @@ of several API's and node.js packages including:
 * OMDB-api
 * bandsintown-api
 
+https://github.com/MDTrue/liri-node-app
+
 
 
 
