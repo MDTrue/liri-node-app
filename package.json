@@ -1,7 +1,6 @@
 {
   "name": "liri-node-app",
   "version": "1.0.0",
-  "description": "",
   "main": "liri.js",
   "dependencies": {
     "dotenv": "^6.2.0",
@@ -23,5 +22,6 @@
   "bugs": {
     "url": "https://github.com/MDTrue/liri-node-app/issues"
   },
-  "homepage": "https://github.com/MDTrue/liri-node-app#readme"
+  "homepage": "https://github.com/MDTrue/liri-node-app#readme",
+  "description": ""
 }

@@ -2,8 +2,14 @@ require("dotenv").config();
 var fs = require("fs");
 var request = require("request");
 var inquirer = require("inquirer")
+var secretKeys = require("./keys.js")
+var Spotify = require("node-spotify-api")
 // var spotify = new Spotify(keys.spotify);
 var moment = require('moment');
+var spotify = new Spotify ({
+    id:secretKeys.spotify.id,
+    secret:secretKeys.spotify.secret
+})
 
 // console.log(spotify)
 start()
@@ -80,6 +86,9 @@ function runSpotify(){
     ]).then(function(userInput){
         var song = userInput.song;
         console.log(song)
+        spotify.search({type: "track", query: song},function(err,data){
+            console.log(data,)
+        })
     })
 }
 function runMovie(){
@@ -92,13 +101,13 @@ function runMovie(){
     ]).then(function(userInput){
         var movie =(userInput.movie)
         console.log(movie)
-        var queryURL = "http://www.omdbapi.com/?apikey=90ca2cdc&="+movie;
+        var queryURL = "https://www.omdbapi.com/?t=Jaws&y=&plot=short&apikey=trilogy";
         request(queryURL,function(error,response,body){
             console.log(response)
             if (!error ) {
 
                 var movieInfo = JSON.parse(body);
-                console.log(movieInfo)
+                // console.log(movieInfo)
             }
         })
     })
